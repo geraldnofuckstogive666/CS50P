@@ -10,14 +10,18 @@ def main():
 
 
 def snake_case(camel: str) -> str:
-    snake_case_word  = ''
-    for letter in camel:
-        if not letter.isupper():
-            snake_case_word += letter
-        else:
-            snake_case_word += "_" + letter.lower() 
+    result = []
 
-    return snake_case_word       
+    for i, letter in enumerate(camel):
+        if letter.isupper():
+            if i != 0:
+                result.append("_")
+            result.append(letter.lower())
+        else:
+            result.append(letter)
+
+
+    return ''.join(result)
 
 
 if __name__ == "__main__":
