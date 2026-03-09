@@ -10,7 +10,6 @@ def main():
     fonts = pyfiglet.Figlet().getFonts()
 
     if len(sys.argv) == 1:
-        user_input = input("Input: ")
         f = random.choice(fonts)
     
     elif len(sys.argv) == 3:
@@ -20,14 +19,14 @@ def main():
         if sys.argv[2] not in fonts:
             sys.exit("Invalid usage")
         
-        user_input = input("Input: ")
         f = sys.argv[2]
 
     else: 
         sys.exit("Invalid usage")
 
-
-    print(f"Output:\n{pyfiglet.figlet_format(user_input, f)}")
+    user_input = input("Input: ")
+    print("Output: ")
+    print(pyfiglet.figlet_format(user_input, f))
 
 
 if __name__ == "__main__":
