@@ -24,6 +24,8 @@ def guessing_game(n):
             guess = int(input("Guess: "))
         except ValueError:
             continue
+        if guess < 1:
+            continue
 
         if guess == n:
             print("Just right!")
@@ -36,7 +38,6 @@ def guessing_game(n):
             print("Too large!")
 
         
-
 
 if __name__ == "__main__":
     main()
