@@ -23,7 +23,7 @@ def guessing_game(n):
         try:
             guess = int(input("Guess: "))
         except ValueError:
-            pass
+            continue
 
         if guess == n:
             print("Just right!")
