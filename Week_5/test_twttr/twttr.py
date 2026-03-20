@@ -5,7 +5,7 @@ def main():
 
 def shorten(word):
     vowels = ('a', 'i', 'e', 'o', 'u')
-    return "".join("" if letter.lower() in vowels else letter for letter in word)
+    return "".join(letter for letter in word if letter.lower() not in vowels)
 
 
 if __name__ == "__main__":
