@@ -1,8 +1,8 @@
 #https://cs50.harvard.edu/python/psets/6/pizza/
+
 import sys
 import csv
-from tabulate import tabulate
-
+from tabulate import tabulate  #need pip install tabulate
 
 
 x = len(sys.argv)
@@ -24,7 +24,6 @@ if x == 2:
 
 elif x < 2:
     sys.exit("Too few command-line arguments")
-
 
 
 else:
